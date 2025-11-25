@@ -11,10 +11,10 @@ function App() {
     <HelmetProvider>
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<MainLayout />}>
+          <Route path="tools/" element={<MainLayout />}>
             <Route index element={<Home />} />
-            <Route path="blog" element={<BlogList />} />
-            <Route path="blog/:id" element={<BlogPost />} />
+            <Route path="tools/blog" element={<BlogList />} />
+            <Route path="tools/blog/:id" element={<BlogPost />} />
           </Route>
         </Routes>
       </BrowserRouter>

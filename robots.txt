@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://jebulin.github.io/tools/sitemap.xml

@@ -9,12 +9,12 @@ import './App.css';
 function App() {
   return (
     <HelmetProvider>
-      <BrowserRouter>
+      <BrowserRouter basename='/tools'>
         <Routes>
-          <Route path="tools/" element={<MainLayout />}>
+          <Route path="/" element={<MainLayout />}>
             <Route index element={<Home />} />
-            <Route path="tools/blog" element={<BlogList />} />
-            <Route path="tools/blog/:id" element={<BlogPost />} />
+            <Route path="/blog" element={<BlogList />} />
+            <Route path="/blog/:id" element={<BlogPost />} />
           </Route>
         </Routes>
       </BrowserRouter>

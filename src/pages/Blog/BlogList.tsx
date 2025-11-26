@@ -7,24 +7,24 @@ import './Blog.css';
 const BLOG_POSTS = [
   {
     id: 1,
-    title: 'Understanding Financial Data Analysis',
-    excerpt: 'Learn the basics of analyzing financial data using Excel and modern tools.',
+    title: 'The Essential Powerhouse - Unpacking the General Uses of File Comparison',
+    excerpt: `File comparison is essential for version control (like Git) in software development, enabling collaboration and bug resolution. It’s crucial for legal redlining to ensure document integrity in regulated industries, and for IT audits to verify system configurations and data integrity in backups.`,
     date: '2025-11-20',
     author: 'Admin',
     image: 'https://images.unsplash.com/photo-1590283603385-17ffb3a7f29f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'
   },
   {
     id: 2,
-    title: 'Optimizing Excel Workflows',
-    excerpt: 'Tips and tricks to speed up your daily Excel tasks and reduce errors.',
+    title: 'The Logic Beneath the Surface - How File Comparison Algorithms Work',
+    excerpt: `Comparison tools use diff algorithms like the Myers Algorithm to solve the Longest Common Subsequence (LCS) problem. This finds the shortest path between two files, identifying additions and deletions. For quick checks of file identity, they use cryptographic hashes (like SHA-256) instead of full content comparison.`,
     date: '2025-11-22',
     author: 'Admin',
     image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'
   },
   {
     id: 3,
-    title: 'The Future of Fintech',
-    excerpt: 'Exploring upcoming trends in financial technology and automation.',
+    title: 'Dollars and Deltas - File Comparison in the Finance World',
+    excerpt: `In finance, comparison is vital for financial reconciliation, matching transaction records across different ledgers to ensure accuracy and fast book-closing. It is also used for regulatory compliance, verifying audit trails, and for fraud detection by spotting anomalies in trading and user activity logs.`,
     date: '2025-11-24',
     author: 'Admin',
     image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'

@@ -1,80 +1,62 @@
-import { useState } from 'react';
-import UploadArea, { type UploadState } from '../../components/UploadArea';
+import { Link } from 'react-router-dom';
+import { FileSpreadsheet, FileJson, ArrowRight, ArrowRightLeft } from 'lucide-react';
 import './Home.css';
-import type { ColumnFormData } from '../../types';
-import processSheet from '../../utils/processData';
-import { directDownloadWorkbook } from '../../services/excel';
 
 export default function Home() {
-  const [upload1, setUpload1] = useState<UploadState>({
-    file: null,
-    isUploading: false,
-    error: null,
-    success: false,
-    showColumnForm: false
-  });
-
-
-  const handleFileSelect1 = (file: File,) => {
-    if (file.type.includes('excel') || file.name.endsWith('.xlsx') || file.name.endsWith('.xls')) {
-      setUpload1(prev => ({ ...prev, file, error: null, success: false, showColumnForm: false }));
-    } else {
-      setUpload1(prev => ({ ...prev, error: 'Please select a valid Excel file (.xlsx or .xls)' }));
-    }
-  };
-
-  const handleUpload1 = async () => {
-    if (!upload1.file) return;
-    setUpload1(prev => ({ ...prev, isUploading: true, error: null }));
-    try {
-      // Simulate file upload
-      await new Promise(resolve => setTimeout(resolve, 2000));
-      console.log('Uploading file 1:', upload1.file.name);
-      setUpload1(prev => ({
-        ...prev,
-        isUploading: false,
-        success: true,
-        showColumnForm: true
-      }));
-    } catch (error) {
-      setUpload1(prev => ({ ...prev, isUploading: false, error: 'Upload failed. Please try again.' }));
-    }
-  };
-
-  const handleClear1 = () => {
-    setUpload1({
-      file: null,
-      isUploading: false,
-      error: null,
-      success: false,
-      showColumnForm: false
-    });
-  };
-
-  const handleColumnSubmit1 = (data: ColumnFormData) => {
-    setUpload1(prev => ({ ...prev, showColumnForm: false }));
-    const { newSheet1Data, newSheet2Data } = processSheet(data);
-    directDownloadWorkbook({ newSheet1Data, newSheet2Data });
-    console.log('Column config for file 1:', data);
-
-    // Reset to rest mode after processing
-    setTimeout(() => {
-      handleClear1();
-    }, 1000);
-  };
-
   return (
-    <>
-      <UploadArea
-        title="First Excel File"
-        description="Upload your first Excel file for processing"
-        accept=".xlsx,.xls,application/vnd.openxmlformats-officedocument.spreadsheetml.sheet,application/vnd.ms-excel"
-        onFileSelect={handleFileSelect1}
-        uploadState={upload1}
-        onUpload={handleUpload1}
-        onColumnSubmit={handleColumnSubmit1}
-        onClear={handleClear1}
-      ></UploadArea>
-    </>
+    <div className="home-container">
+      <div className="home-header">
+        <div className="header-content">
+          <h1>Developer Tools Hub</h1>
+          <p>Essential tools for developers and data analysts</p>
+        </div>
+      </div>
+
+      <main className="home-main">
+        <div className="tools-grid">
+          {/* File Comparison Tool Card */}
+          <div className="tool-card">
+            <div className="tool-icon-wrapper">
+              <FileSpreadsheet className="tool-icon" />
+            </div>
+            <div className="tool-content">
+              <h3>File Comparison Tool</h3>
+              <p>Upload and compare Excel files to identify differences, merge data, and generate reports.</p>
+              <Link to="/file-comparison" className="tool-link">
+                Try Tool <ArrowRight size={16} />
+              </Link>
+            </div>
+          </div>
+
+          {/* JSON Formatter Tool Card */}
+          <div className="tool-card">
+            <div className="tool-icon-wrapper">
+              <FileJson className="tool-icon" />
+            </div>
+            <div className="tool-content">
+              <h3>JSON Formatter & Validator</h3>
+              <p>Validate, format, and clean your JSON data with advanced error detection and editing features.</p>
+              <Link to="/json-formatter" className="tool-link">
+                Try Tool <ArrowRight size={16} />
+              </Link>
+            </div>
+          </div>
+
+          {/* Text Comparison Tool Card */}
+          <div className="tool-card">
+            <div className="tool-icon-wrapper">
+              <ArrowRightLeft className="tool-icon" />
+            </div>
+            <div className="tool-content">
+              <h3>Text Comparison Tool</h3>
+              <p>Compare two text files or snippets to find differences instantly. Highlight additions and deletions.</p>
+              <Link to="/text-compare" className="tool-link">
+                Try Tool <ArrowRight size={16} />
+              </Link>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
   );
 }

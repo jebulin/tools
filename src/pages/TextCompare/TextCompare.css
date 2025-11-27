@@ -1,0 +1,205 @@
+/* Text Compare - Dark Theme with Accessible Diff Colors */
+
+.text-compare-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.compare-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.compare-header h1 {
+  font-size: 2.5rem;
+  color: var(--text-color);
+  margin-bottom: 0.5rem;
+  background: linear-gradient(135deg, #fff 0%, #cbd5e1 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.compare-header p {
+  color: var(--text-secondary);
+  font-size: 1.1rem;
+}
+
+.compare-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.input-group label {
+  font-weight: 600;
+  color: var(--text-color);
+  font-size: 0.875rem;
+}
+
+.text-input {
+  width: 100%;
+  height: 300px;
+  padding: 1rem;
+  background: var(--surface-color);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  color: var(--text-color);
+  font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', monospace;
+  font-size: 0.9rem;
+  line-height: 1.6;
+  resize: vertical;
+  transition: border-color 0.2s;
+}
+
+.text-input::placeholder {
+  color: var(--text-secondary);
+  opacity: 0.6;
+}
+
+.text-input:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 3px rgba(100, 108, 255, 0.2);
+}
+
+.compare-actions {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 3rem;
+}
+
+.compare-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 2rem;
+  background: linear-gradient(135deg, var(--primary-color) 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.compare-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(100, 108, 255, 0.3);
+}
+
+.results-section {
+  background: var(--surface-color);
+  border-radius: 12px;
+  border: 1px solid var(--border-color);
+  overflow: hidden;
+}
+
+.results-header {
+  padding: 1rem 1.5rem;
+  background: rgba(0, 0, 0, 0.2);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.results-header h2 {
+  font-size: 1.25rem;
+  color: var(--text-color);
+  margin: 0 0 0.25rem 0;
+}
+
+.results-subtitle {
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+  margin: 0;
+}
+
+.diff-viewer {
+  padding: 0;
+}
+
+.diff-unified {
+  padding: 1.5rem;
+  font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', monospace;
+  font-size: 0.9rem;
+  line-height: 1.8;
+  white-space: pre-wrap;
+  word-break: break-word;
+  background: var(--bg-color);
+  color: var(--text-color);
+}
+
+/* Diff Styles - WCAG AA Compliant */
+
+/* Deleted text - Red theme */
+.diff-deleted {
+  background-color: #3f1a1a;
+  color: #fca5a5;
+  text-decoration: line-through;
+  text-decoration-color: #dc2626;
+  text-decoration-thickness: 2px;
+  padding: 0.125rem 0.25rem;
+  border-radius: 2px;
+  display: inline;
+}
+
+/* Added text - Green theme */
+.diff-added {
+  background-color: #1a2e1a;
+  color: #86efac;
+  text-decoration: none;
+  padding: 0.125rem 0.25rem;
+  border-radius: 2px;
+  display: inline;
+  border-bottom: 2px solid #16a34a;
+}
+
+/* Unchanged text - Neutral theme */
+.diff-unchanged {
+  color: var(--text-secondary);
+  display: inline;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .text-compare-container {
+    padding: 1rem;
+  }
+
+  .compare-header h1 {
+    font-size: 2rem;
+  }
+
+  .compare-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .text-input {
+    height: 250px;
+  }
+
+  .diff-unified {
+    padding: 1rem;
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .compare-header h1 {
+    font-size: 1.75rem;
+  }
+
+  .compare-btn {
+    font-size: 1rem;
+    padding: 0.625rem 1.5rem;
+  }
+}

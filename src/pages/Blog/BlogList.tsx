@@ -28,6 +28,54 @@ const BLOG_POSTS = [
     date: '2025-11-24',
     author: 'Admin',
     image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'
+  },
+  {
+    id: 4,
+    title: 'How JSON Validators Save Time for Developers',
+    excerpt: 'JSON validators automate error detection, preventing runtime crashes and saving hours of debugging. Learn how integrating validation into your workflow boosts productivity.',
+    date: '2025-11-25',
+    author: 'Admin',
+    image: 'https://images.unsplash.com/photo-1555066931-4365d14bab8c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'
+  },
+  {
+    id: 5,
+    title: 'Common JSON Formatting Errors and How to Fix Them',
+    excerpt: 'Trailing commas, missing quotes, and wrong data types are common pitfalls in JSON. Discover the most frequent mistakes and how to spot and fix them instantly.',
+    date: '2025-11-26',
+    author: 'Admin',
+    image: 'https://images.unsplash.com/photo-1516116216624-53e697fedbea?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'
+  },
+  {
+    id: 6,
+    title: 'The Importance of Data Validation in Daily Tech Tasks',
+    excerpt: 'Data validation ensures integrity, security, and reliability in applications. Explore why validating your data inputs and outputs is critical for robust software.',
+    date: '2025-11-26',
+    author: 'Admin',
+    image: 'https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'
+  },
+  {
+    id: 7,
+    title: 'Why You Need a Text Comparison Tool',
+    excerpt: 'Manually checking for differences between two texts is tedious and error-prone. Discover how a text comparison tool can save you time and ensure accuracy.',
+    date: '2025-11-27',
+    author: 'Admin',
+    image: 'https://images.unsplash.com/photo-1516321318423-f06f85e504b3?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'
+  },
+  {
+    id: 8,
+    title: 'How to Compare Code Snippets Online',
+    excerpt: 'Comparing code snippets is essential for debugging and version control. Learn how to use online tools to visualize code changes effectively.',
+    date: '2025-11-27',
+    author: 'Admin',
+    image: 'https://images.unsplash.com/photo-1555099962-4199c345e5dd?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'
+  },
+  {
+    id: 9,
+    title: 'Best Free Online Diff Checkers',
+    excerpt: 'Looking for the best free online diff checkers? We review the top tools available to help you choose the right one for your needs.',
+    date: '2025-11-27',
+    author: 'Admin',
+    image: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'
   }
 ];
 

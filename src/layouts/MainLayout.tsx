@@ -1,5 +1,5 @@
 import { Link, Outlet } from 'react-router-dom';
-import { Home, BookOpen, Github } from 'lucide-react';
+import { Home, BookOpen, Github, Info } from 'lucide-react';
 import './MainLayout.css';
 
 export default function MainLayout() {
@@ -24,6 +24,10 @@ export default function MainLayout() {
               <BookOpen size={18} />
               <span>Blog</span>
             </Link>
+            <Link to="/about" className="nav-link">
+              <Info size={18} />
+              <span>About Us</span>
+            </Link>
             <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="nav-link">
               <Github size={18} />
               <span>GitHub</span>
@@ -38,7 +42,13 @@ export default function MainLayout() {
 
       <footer className="app-footer">
         <div className="footer-content">
-          <p>&copy; {new Date().getFullYear()} FinanceTool. All rights reserved.</p>
+          <div className="footer-links">
+            <Link to="/about">About Us</Link>
+            <Link to="/sitemap">Sitemap</Link>
+            <Link to="/terms">Terms of Service</Link>
+            <Link to="/privacy">Privacy Policy</Link>
+          </div>
+          <p>&copy; {new Date().getFullYear()} mydaytools.com. All rights reserved.</p>
         </div>
       </footer>
     </div>

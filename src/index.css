@@ -56,12 +56,11 @@ button {
   background-color: var(--surface-color);
   color: var(--text-color);
   cursor: pointer;
-  transition: all 0.25s;
+  transition: border-color 0.25s;
 }
 
 button:hover {
   border-color: var(--primary-color);
-  background-color: var(--primary-color);
 }
 
 button:focus,

@@ -7,7 +7,12 @@ import TextCompare from './pages/TextCompare/TextCompare';
 import JsonFormatter from './pages/JsonFormatter/JsonFormatter';
 import BlogList from './pages/Blog/BlogList';
 import BlogPost from './pages/Blog/BlogPost';
+import AboutUs from './pages/AboutUs/AboutUs';
+import TermsOfService from './pages/TermsOfService/TermsOfService';
+import PrivacyPolicy from './pages/PrivacyPolicy/PrivacyPolicy';
+import Sitemap from './pages/Sitemap/Sitemap';
 import './App.css';
+
 
 function App() {
   return (
@@ -21,6 +26,10 @@ function App() {
             <Route path="/json-formatter" element={<JsonFormatter />} />
             <Route path="/blog" element={<BlogList />} />
             <Route path="/blog/:id" element={<BlogPost />} />
+            <Route path="/about" element={<AboutUs />} />
+            <Route path="/terms" element={<TermsOfService />} />
+            <Route path="/privacy" element={<PrivacyPolicy />} />
+            <Route path="/sitemap" element={<Sitemap />} />
           </Route>
         </Routes>
       </BrowserRouter>
